@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Tesla Model S, 3, Y, X &amp; Cybertruck: Range, Speed and Specs Compared</title>
+<meta name="description" content="Explore the Tesla lineup in 3D. Compare range, 0–60 mph times and specs for Model S Plaid, Model 3, Model Y, Model X and Cybertruck, with answers to common questions.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website"><meta property="og:title" content="Tesla Lineup in 3D: Specs, Range and Speed Compared">
+<meta property="og:description" content="Interactive 3D tour of the Tesla lineup with a side-by-side range and acceleration guide.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"Tesla Lineup in 3D: Specs, Range and Speed Compared","inLanguage":"en","url":"https://YOUR-DOMAIN.com/"},{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How fast is the Model S Plaid?","acceptedAnswer":{"@type":"Answer","text":"This guide lists the Model S Plaid at 1.99 seconds from 0 to 60 mph, 1,020 horsepower and a 200 mph top speed."}},
+{"@type":"Question","name":"What is the estimated range of each Tesla model?","acceptedAnswer":{"@type":"Answer","text":"Estimated range here is about 396 miles for the Model S Plaid and roughly 300 to 330 miles for the Model 3, Model Y, Model X and Cybertruck."}},
+{"@type":"Question","name":"Which Tesla has seven seats?","acceptedAnswer":{"@type":"Answer","text":"The Model X is listed with seven seats and falcon-wing doors."}},
+{"@type":"Question","name":"Is this the official Tesla website?","acceptedAnswer":{"@type":"Answer","text":"No. This is an unofficial concept design and is not affiliated with Tesla, Inc."}}]}]}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--r:#e31937;--m:#9a9da3;--f:'Syncopate','Arial Black',sans-serif;--b:'Manrope',system-ui,sans-serif;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#000;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:#000;color:#fff;font:300 16px/1.65 var(--b);overflow-x:hidden}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+#bg{position:fixed;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;font:700 clamp(5rem,26vw,28rem)/1 var(--f);letter-spacing:.04em;color:#0e0e10;-webkit-text-stroke:1px #26262a;transform:translateY(-8vh);user-select:none}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:22px 5vw;mix-blend-mode:difference}
+nav b{font:700 1.05rem var(--f);letter-spacing:.5em}nav div{display:flex;gap:2.2rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+nav a{color:#fff;text-decoration:none}
+section{position:relative;z-index:2;min-height:100vh;min-height:100svh;display:flex;padding:0 5vw}
+.sec{align-items:center}.col{max-width:520px}
+.eb{font:400 .7rem var(--f);letter-spacing:.3em;color:var(--r);margin-bottom:1.4rem}
+h1,h2{font-family:var(--f);font-weight:700;text-transform:uppercase;line-height:1.12}
+h1{font-size:clamp(1.5rem,3.4vw,3rem);max-width:15em}h2{font-size:clamp(1.5rem,3.6vw,3.2rem);margin-bottom:1.4rem}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.12em}.w i{display:inline-block;font-style:normal}
+p.d{color:var(--m);max-width:44ch;margin-bottom:1.8rem}
+.b{display:inline-block;padding:1.1rem 2rem;border:1px solid #fff;color:#fff;text-decoration:none;font:400 .7rem var(--f);letter-spacing:.2em;transition:.35s}
+.b.p{background:#fff;color:#000}.b:hover{background:var(--r);border-color:var(--r);color:#fff}
+.bt{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+#hero{align-items:flex-end;padding-bottom:9vh}
+.hint{position:absolute;right:5vw;bottom:9vh;font:.6rem var(--f);letter-spacing:.4em;color:var(--m);writing-mode:vertical-rl}
+.sw{display:flex;gap:.8rem;margin:1.6rem 0}.sw button{width:30px;height:30px;border-radius:50%;border:2px solid #333;cursor:pointer;transition:.3s}.sw button.on{border-color:#fff;transform:scale(1.2)}
+.ch{display:flex;gap:2rem;list-style:none;flex-wrap:wrap}.ch li{font-size:.7rem;color:var(--m);letter-spacing:.15em;text-transform:uppercase}.ch b{display:block;font:700 1.4rem var(--f);color:#fff;letter-spacing:0}
+#models{flex-direction:column;justify-content:space-between;padding-top:15vh;padding-bottom:6vh}
+#mi{margin-top:.6rem;color:var(--m);font-size:.85rem;letter-spacing:.1em}#mi b{color:#fff;font:700 1rem var(--f);display:block;margin-bottom:.3rem}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cd{background:rgba(22,23,26,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #232428;padding:1.3rem;text-align:left;color:#fff;cursor:pointer;font-family:var(--b);transition:.4s}
+.cd:hover,.cd.on{border-color:var(--r);transform:translateY(-6px)}.cd b{display:block;font:700 .75rem var(--f);margin-bottom:.5rem}.cd span{font-size:.75rem;color:var(--m)}
+#perf{justify-content:flex-start;align-items:center}
+.gr{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem 3rem;margin-top:1rem}
+.cn{font:700 clamp(2rem,4.4vw,3.8rem)/1 var(--f)}.cn+small{display:block;margin-top:.5rem;color:var(--m);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+.bar{height:2px;background:#222;margin-top:.8rem}.bar i{display:block;height:100%;width:0;background:var(--r)}
+.fn{font-size:.65rem;color:#555;margin-top:2rem}
+#int{align-items:flex-end;padding-bottom:10vh}#drive{align-items:center;justify-content:center;text-align:center;overflow:hidden;min-height:140vh}
+.mq{position:absolute;top:50%;left:100%;white-space:nowrap;font:700 clamp(4rem,16vw,15rem)/1 var(--f);color:transparent;-webkit-text-stroke:1px #3a3a40;transform:translateY(-50%)}
+#drive .col{max-width:none;position:relative;z-index:3;margin-top:46vh}
+#drive:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0,transparent 25%,transparent 75%,#000 100%);z-index:1;pointer-events:none}
+footer{position:relative;z-index:3;background:#000;border-top:1px solid #1b1b1e;padding:12vh 5vw 5vh}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}footer b.l{font:700 clamp(2rem,6vw,5rem) var(--f);letter-spacing:.2em;color:#fff}
+footer h4{font:400 .65rem var(--f);letter-spacing:.3em;color:var(--r);margin-bottom:1.2rem}footer a{display:block;color:var(--m);text-decoration:none;font-size:.85rem;margin-bottom:.6rem;transition:.3s}footer a:hover{color:#fff}
+.cp{margin-top:6rem;font-size:.7rem;color:#555;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+#ld{position:fixed;inset:0;background:#000;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem}
+#ld b{font:700 1rem var(--f);letter-spacing:.7em;padding-left:.7em}#ld em{font:700 3rem var(--f);font-style:normal}#ld div{width:200px;height:1px;background:#222}#ld i{display:block;height:100%;width:0;background:var(--r)}
+@media(max-width:820px){nav div{display:none}.sec{align-items:flex-end;padding-bottom:9vh}#perf{padding-top:55vh}.col{max-width:100%}.cards{display:flex;overflow-x:auto;gap:10px;padding-bottom:6px}.cd{flex:0 0 62%}.fg{grid-template-columns:1fr 1fr}.fg>div:first-child{grid-column:1/3}#models{padding-top:12vh}.hint{display:none}.gr{gap:1.6rem}h1{font-size:1.45rem}#hero{padding-bottom:7vh}}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;z-index:50;background:#fff;color:#000;padding:8px}
+.adsec{min-height:0;padding:7vh 5vw;justify-content:center}
+.adw{width:100%;max-width:970px;min-height:130px;background:rgba(10,10,12,.92);border:1px solid #1b1b1e;padding:.6rem;text-align:center}
+.adw small{display:block;font:.55rem var(--f);letter-spacing:.3em;color:#666;margin-bottom:.5rem}
+.art{display:block;min-height:0;background:#000;z-index:3;padding:12vh 5vw 6vh}.art .in{max-width:880px;margin:0 auto}
+.art h2{font-size:clamp(1.3rem,3vw,2.2rem)}.art h3{font:700 .9rem var(--f);margin:2.2rem 0 .6rem}.art p{color:var(--m);margin-bottom:1rem;max-width:68ch}
+.tw{overflow-x:auto;margin:1.6rem 0}table{width:100%;border-collapse:collapse;font-size:.85rem;min-width:520px}
+th,td{text-align:left;padding:.8rem;border-bottom:1px solid #1b1b1e}th{font:400 .6rem var(--f);letter-spacing:.2em;color:var(--r)}td{color:var(--m)}td:first-child{color:#fff}
+details{border-bottom:1px solid #1b1b1e;padding:1rem 0}summary{cursor:pointer;color:#fff}details p{margin:.8rem 0 0}
+.cc{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;max-width:560px;background:#111214;border:1px solid #2a2b30;padding:1rem 1.2rem;font-size:.8rem;color:var(--m);display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.cc[hidden]{display:none}.cc p{flex:1 1 220px}.cc a{color:#fff}.cc button{font:400 .6rem var(--f);letter-spacing:.15em;padding:.8rem 1.2rem;border:1px solid #fff;background:none;color:#fff;cursor:pointer}.cc #ccy{background:#fff;color:#000}
+</style><noscript><style>#ld{display:none}</style></noscript></head><body>
+<a class="skip" href="#show">Skip to content</a>
+<div id="ld"><b>TESLA</b><em id="pc">0</em><div><i id="pb"></i></div></div>
+<nav aria-label="Main"><b>TESLA</b><div><a href="#show">Model S</a><a href="#models">Models</a><a href="#perf">Performance</a><a href="#int">Interior</a><a href="#batt">Battery</a><a href="#guide">Guide</a></div></nav>
+<div id="bg" data-sp="0">TESLA</div><canvas id="c" aria-hidden="true"></canvas>
+<main>
+<section id="hero" data-pose="hero"><div><p class="eb rv">MODEL S PLAID — TRI-MOTOR</p><h1 class="sp">The future is already here.</h1>
+<div class="bt rv"><a class="b p" href="#models">EXPLORE MODELS</a><a class="b" href="#drive">DISCOVER TESLA</a></div></div><div class="hint">SCROLL</div></section>
+<section id="show" class="sec" data-pose="show"><div class="col"><p class="eb rv">01 — MODEL S PLAID</p><h2 class="sp">Beyond ludicrous.</h2>
+<p class="d rv">Three motors, carbon‑sleeved rotors and a glass cabin that cuts the wind. The quickest production sedan ever built — with room for five and a sound of absolute silence.</p>
+<div class="sw rv" id="sw"></div><ul class="ch rv"><li><b>1,020</b>horsepower</li><li><b>396 mi</b>est. range</li><li><b>AWD</b>tri‑motor</li></ul></div></section>
+<section id="models" data-pose="models"><div><p class="eb rv">02 — THE LINEUP</p><h2 class="sp">Choose your future.</h2><div id="mi" class="rv"></div></div><div class="cards rv" id="cards"></div></section>
+<section id="perf" class="sec" data-pose="perf"><div class="col" style="max-width:640px"><p class="eb rv">03 — PERFORMANCE</p><h2 class="sp">Numbers that rewrite physics.</h2>
+<div class="gr"><div class="rv"><div class="cn" data-n="1.99" data-d="2">0</div><small>0–60 mph (sec)</small><div class="bar"><i></i></div></div>
+<div class="rv"><div class="cn" data-n="1020" data-d="0">0</div><small>Horsepower</small><div class="bar"><i></i></div></div>
+<div class="rv"><div class="cn" data-n="396" data-d="0">0</div><small>Miles of range (est.)</small><div class="bar"><i></i></div></div>
+<div class="rv"><div class="cn" data-n="200" data-d="0">0</div><small>Top speed (mph)</small><div class="bar"><i></i></div></div></div>
+<p class="fn rv">Figures based on Tesla’s published Model S Plaid specifications. Concept design.</p></div></section>
+<section class="adsec" aria-label="Advertisement"><div class="adw"><small>ADVERTISEMENT</small><ins class="adsbygoogle" style="display:block" data-ad-slot="REPLACE_SLOT_1" data-ad-format="auto" data-full-width-responsive="true"></ins></div></section>
+<section id="int" data-pose="int"><div class="col"><p class="eb rv">04 — INTERIOR</p><h2 class="sp">Step inside.</h2><p class="d rv">A cockpit built around one idea: nothing unnecessary. Yoke steering, a cinematic cabin display and a silence you can feel. Move your cursor to look around.</p></div></section>
+<section id="batt" class="sec" data-pose="batt"><div class="col"><p class="eb rv">05 — BATTERY TECHNOLOGY</p><h2 class="sp">Energy, reengineered.</h2>
+<p class="d rv">A structural pack in the floor lowers the centre of gravity, stiffens the chassis and feeds three motors with instant torque. Liquid thermal management, regenerative braking and over‑the‑air updates keep it improving long after delivery.</p>
+<ul class="ch rv"><li><b>Liquid</b>thermal control</li><li><b>OTA</b>updates</li><li><b>Regen</b>braking</li></ul></div></section>
+<section id="drive" data-pose="drive"><div class="mq">INSTANT TORQUE — SILENT POWER — ZERO TAILPIPE —</div><div class="col"><p class="eb rv">06 — THE DRIVE</p><h2 class="sp">Feel it. Don’t hear it.</h2><div class="bt rv" style="justify-content:center"><a class="b p" href="#">BOOK A TEST DRIVE</a></div></div></section>
+</main>
+<section id="guide" class="art"><div class="in">
+<h2>Tesla lineup guide: range, speed and specs</h2>
+<p>The five models in this tour cover very different needs, from the compact Model 3 to the seven-seat Model X and the stainless-steel Cybertruck. The table below compares the estimated range and 0–60 mph time for each one, using the same figures shown on the model selector above.</p>
+<div class="tw"><table><thead><tr><th>Model</th><th>Est. range</th><th>0–60 mph</th><th>Notes</th></tr></thead><tbody>
+<tr><td>Model S Plaid</td><td>~396 mi</td><td>1.99 s</td><td>1,020 hp, 200 mph top speed</td></tr>
+<tr><td>Model 3</td><td>~300 mi</td><td>2.9 s</td><td>Compact sport sedan</td></tr>
+<tr><td>Model Y</td><td>~310 mi</td><td>3.5 s</td><td>Versatile electric SUV</td></tr>
+<tr><td>Model X</td><td>~330 mi</td><td>2.5 s</td><td>Seven seats, falcon-wing doors</td></tr>
+<tr><td>Cybertruck</td><td>~300 mi</td><td>2.6 s</td><td>Stainless-steel exoskeleton</td></tr></tbody></table></div>
+<p>Figures are estimates for illustration. Check the manufacturer for current specifications before you buy.</p>
+<section class="adsec" style="padding:3vh 0" aria-label="Advertisement"><div class="adw"><small>ADVERTISEMENT</small><ins class="adsbygoogle" style="display:block" data-ad-slot="REPLACE_SLOT_2" data-ad-format="auto" data-full-width-responsive="true"></ins></div></section>
+<h3>Frequently asked questions</h3>
+<details><summary>How fast is the Model S Plaid?</summary><p>This guide lists it at 1.99 seconds from 0 to 60 mph, with 1,020 horsepower and a 200 mph top speed.</p></details>
+<details><summary>What is the estimated range of each Tesla model?</summary><p>About 396 miles for the Model S Plaid and roughly 300 to 330 miles for the Model 3, Model Y, Model X and Cybertruck.</p></details>
+<details><summary>Which Tesla has seven seats?</summary><p>The Model X is listed with seven seats and falcon-wing doors.</p></details>
+<details><summary>Is this the official Tesla website?</summary><p>No. This is an unofficial concept design and is not affiliated with Tesla, Inc.</p></details>
+</div></section>
+<footer><div class="fg"><div><b class="l">TESLA</b><p class="d" style="margin-top:1rem">Accelerating the world’s transition to sustainable energy.</p></div>
+<div><h4>MODELS</h4><a href="#">Model S</a><a href="#">Model 3</a><a href="#">Model Y</a><a href="#">Model X</a><a href="#">Cybertruck</a></div>
+<div><h4>COMPANY</h4><a href="#">About</a><a href="#">Careers</a><a href="#">Investors</a><a href="#">Impact</a></div>
+<div><h4>SUPPORT</h4><a href="#">Charging</a><a href="#">Service</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div></div>
+<div class="cp"><span>© 2026 Concept design. Unofficial, not affiliated with Tesla, Inc.</span><span>Built with Three.js · GSAP</span></div></footer>
+<div class="cc" id="cc" hidden role="dialog" aria-label="Cookie consent"><p>We use cookies to show ads and measure traffic. Choose personalised ads, or decline to see non-personalised ads only. <a href="privacy.html">Privacy Policy</a></p><button id="ccn" type="button">DECLINE</button><button id="ccy" type="button">ACCEPT</button></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+const $=s=>document.querySelector(s),mob=()=>innerWidth<820;
+/* ---------- models (procedural side-profile extrusions) ---------- */
+const sc2=(a,x,y)=>a.map(p=>[p[0]*x,p[1]*y]);
+const SP=[[-2.35,.42],[-2.45,.62],[-1.6,.86],[-.95,.98],[-.2,1.38],[.6,1.4],[1.4,1.08],[2.3,.9],[2.45,.62],[2.3,.42],[1.5,.36],[-1.5,.36]],
+SG=[[-.85,1],[-.2,1.34],[.6,1.36],[1.3,1.04]];
+const M=[
+{n:'Model S Plaid',p:SP,g:SG,w:1.9,wx:1.5,r:.42,sm:1,i:'~396 mi · 1.99 s · 200 mph'},
+{n:'Model 3',p:sc2(SP,.94,.97),g:sc2(SG,.94,.97),w:1.82,wx:1.4,r:.4,sm:1,i:'~300 mi · 2.9 s · Compact sport sedan'},
+{n:'Model Y',p:sc2(SP,.93,1.14),g:sc2(SG,.93,1.14),w:1.88,wx:1.4,r:.44,sm:1,i:'~310 mi · 3.5 s · Versatile electric SUV'},
+{n:'Model X',p:sc2(SP,1,1.26),g:sc2(SG,1,1.26),w:2,wx:1.5,r:.47,sm:1,i:'~330 mi · 2.5 s · Seven seats, falcon‑wing doors'},
+{n:'Cybertruck',p:[[-2.6,.5],[-2.6,.85],[.3,1.62],[1.3,1.56],[2.6,1.2],[2.6,.5]],g:[[-.2,1.2],[.3,1.56],[1.25,1.5],[1.75,1.2]],w:2.1,wx:1.65,r:.58,sm:0,bar:1,i:'~300 mi · 2.6 s · Exoskeleton stainless steel'}];
+let mi=0,col='#e8e8ea';
+/* ---------- renderer ---------- */
+const R=new THREE.WebGLRenderer({canvas:$('#c'),antialias:true,alpha:true,powerPreference:'high-performance'});
+R.setPixelRatio(Math.min(devicePixelRatio,2));R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.1;R.outputEncoding=THREE.sRGBEncoding;
+const S=new THREE.Scene(),cam=new THREE.PerspectiveCamera(32,1,.1,100);
+function sz(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix()}sz();
+/* studio environment: softboxes baked to PMREM for glossy reflections */
+(function(){const e=new THREE.Scene();e.background=new THREE.Color(0x020202);
+const box=(w,h,x,y,z,rx,ry,c)=>{const m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:c,side:2}));m.position.set(x,y,z);m.rotation.set(rx,ry,0);e.add(m)};
+const W=(k)=>new THREE.Color(k,k,k);
+box(16,7,0,9,0,Math.PI/2,0,W(5));box(1.6,10,-11,4,0,0,Math.PI/2,W(8));box(1.6,10,11,4,0,0,Math.PI/2,W(8));
+box(10,1.2,0,3,-11,0,0,W(4));box(10,.8,0,.8,11,0,0,new THREE.Color(3,.2,.3));box(6,6,-6,5,8,0,.6,W(2));
+const g=new THREE.PMREMGenerator(R);S.environment=g.fromScene(e,.02).texture})();
+S.add(new THREE.AmbientLight(0xffffff,.15));
+const key=new THREE.DirectionalLight(0xffffff,.7);key.position.set(4,8,5);S.add(key);
+const rimL=new THREE.PointLight(0xe31937,1.2,9);rimL.position.set(-3,1,-3);S.add(rimL);
+const rad=(c)=>{const k=document.createElement('canvas');k.width=k.height=256;const x=k.getContext('2d'),g=x.createRadialGradient(128,128,0,128,128,128);g.addColorStop(0,c[0]);g.addColorStop(.4,c[1]);g.addColorStop(1,c[2]);x.fillStyle=g;x.fillRect(0,0,256,256);return new THREE.CanvasTexture(k)};
+const fl=new THREE.Mesh(new THREE.CircleGeometry(18,64),new THREE.MeshStandardMaterial({color:0x0a0b0c,metalness:.9,roughness:.2,transparent:true,alphaMap:rad(['#fff','#fff','#000'])}));fl.rotation.x=-Math.PI/2;S.add(fl);
+const root=new THREE.Group(),car=new THREE.Group();root.add(car);S.add(root);
+const glow=new THREE.Mesh(new THREE.CircleGeometry(4,48),new THREE.MeshBasicMaterial({map:rad(['rgba(227,25,55,.55)','rgba(227,25,55,.12)','rgba(0,0,0,0)']),transparent:true,blending:THREE.AdditiveBlending,depthWrite:false}));glow.rotation.x=-Math.PI/2;glow.position.y=.02;root.add(glow);
+const ring=new THREE.Mesh(new THREE.RingGeometry(3.3,3.34,96),new THREE.MeshBasicMaterial({color:0xe31937,transparent:true,opacity:.5}));ring.rotation.x=-Math.PI/2;ring.position.y=.03;root.add(ring);
+/* materials */
+const paint=new THREE.MeshPhysicalMaterial({color:col,metalness:.55,roughness:.28,clearcoat:1,clearcoatRoughness:.04,envMapIntensity:1.3,transparent:true}),
+glassM=new THREE.MeshPhysicalMaterial({color:0x020304,metalness:.9,roughness:.05,envMapIntensity:1.8,transparent:true}),
+tireM=new THREE.MeshStandardMaterial({color:0x0a0a0a,roughness:.85}),rimM=new THREE.MeshStandardMaterial({color:0xa3a6ab,metalness:1,roughness:.2}),
+blk=new THREE.MeshStandardMaterial({color:0x050505,roughness:.7}),lampM=new THREE.MeshBasicMaterial({color:0xffffff}),tailM=new THREE.MeshBasicMaterial({color:0xff1a2e});
+function applyPaint(){const c=M[mi].sm===0;paint.color.set(c?0x9ea2a8:col);paint.metalness=c?1:.55;paint.roughness=c?.34:.28;paint.clearcoat=c?0:1;paint.flatShading=!M[mi].sm;paint.needsUpdate=true}
+function shp(pts,sm){let v=pts.map(p=>new THREE.Vector3(p[0],p[1],0));if(sm)v=new THREE.CatmullRomCurve3(v,true,'centripetal').getPoints(140);return new THREE.Shape(v.map(q=>new THREE.Vector2(q.x,q.y)))}
+function ext(s,w,bv,seg){const d=w-2*bv,g=new THREE.ExtrudeGeometry(s,{depth:d,bevelEnabled:true,bevelThickness:bv,bevelSize:bv*.8,bevelSegments:seg,steps:1});g.translate(0,0,-d/2);return g}
+let body,glass,wheels=[];
+function setModel(i){mi=i;const m=M[i];while(car.children.length){const o=car.children[0];car.remove(o);o.traverse(k=>k.geometry&&k.geometry.dispose())}wheels=[];
+const bv=m.sm?.16:.05,sg=m.sm?8:1;
+body=new THREE.Mesh(ext(shp(m.p,m.sm),m.w,bv,sg),paint);glass=new THREE.Mesh(ext(shp(m.g,0),m.w+.04,.02,1),glassM);car.add(body,glass);
+const xs=m.p.map(p=>p[0]),nose=m.p.reduce((a,p)=>p[0]<a[0]?p:a),tail=m.p.reduce((a,p)=>p[0]>a[0]?p:a),hy=m.bar?.85:nose[1]+.12;
+const hl=(x,y,z,l,mat)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(.06,.05,l),mat);b.position.set(x,y,z);car.add(b)};
+if(m.bar)hl(Math.min(...xs)-.01,hy,0,m.w*.9,lampM);else[-1,1].forEach(s=>hl(nose[0]+.03,hy,s*.5,.5,lampM));
+hl(Math.max(...xs)+.01,tail[1]+.14,0,m.w*.85,tailM);
+[[-1,-1],[-1,1],[1,-1],[1,1]].forEach(([a,s])=>{const g=new THREE.Group(),r=m.r;g.position.set(a*m.wx,r,s*(m.w/2-.12));
+const t=new THREE.Mesh(new THREE.CylinderGeometry(r,r,.3,40).rotateX(Math.PI/2),tireM),rm=new THREE.Mesh(new THREE.CylinderGeometry(r*.7,r*.7,.31,32).rotateX(Math.PI/2),rimM);g.add(t,rm);
+for(let k=0;k<5;k++)[-1,1].forEach(f=>{const sp=new THREE.Mesh(new THREE.BoxGeometry(r*1.3,.07,.02),blk);sp.rotation.z=k*Math.PI/5;sp.position.z=f*.158;g.add(sp)});
+const ar=new THREE.Mesh(new THREE.CircleGeometry(r*1.12,32),blk);ar.position.set(a*m.wx,r,s*(m.w/2+.006));if(s<0)ar.rotation.y=Math.PI;car.add(ar,g);wheels.push(g)});
+applyPaint()}
+/* interior (cutaway) */
+const intG=new THREE.Group(),seat=new THREE.MeshStandardMaterial({color:0x111214,roughness:.6}),add=(geo,mat,x,y,z,rz)=>{const o=new THREE.Mesh(geo,mat);o.position.set(x,y,z);if(rz)o.rotation.z=rz;intG.add(o);return o};
+const scn=document.createElement('canvas');scn.width=512;scn.height=300;{const x=scn.getContext('2d');x.fillStyle='#050608';x.fillRect(0,0,512,300);x.fillStyle='#fff';x.font='700 96px sans-serif';x.fillText('0',40,130);x.font='20px sans-serif';x.fillText('MPH',48,162);x.fillStyle='#e31937';x.fillRect(40,205,432,6);x.fillStyle='#fff';x.fillRect(40,205,150,6);x.font='600 24px sans-serif';x.fillText('PLAID  ·  D',40,262)}
+const scT=new THREE.CanvasTexture(scn);scT.encoding=THREE.sRGBEncoding;
+add(new THREE.BoxGeometry(2.4,.04,1.7),blk,0,.42,0);add(new THREE.BoxGeometry(.5,.3,1.75),blk,-.8,.82,0);add(new THREE.BoxGeometry(.9,.2,.2),seat,0,.55,0);
+const scr=add(new THREE.PlaneGeometry(.66,.38),new THREE.MeshBasicMaterial({map:scT}),-.54,.98,0);scr.rotation.y=Math.PI/2;
+add(new THREE.BoxGeometry(.02,.02,1.7),tailM,-.545,.88,0);
+[-.45,.45].forEach(z=>{add(new THREE.BoxGeometry(.55,.14,.5),seat,.15,.55,z);add(new THREE.BoxGeometry(.12,.62,.5),seat,.46,.92,z,-.15);add(new THREE.BoxGeometry(.1,.22,.3),seat,.52,1.3,z)});
+const yk=add(new THREE.TorusGeometry(.17,.016,10,32),blk,-.42,1.02,-.45);yk.rotation.y=Math.PI/2;
+const il=new THREE.PointLight(0xffffff,0,3.5);il.position.set(-.1,1.3,0);intG.add(il);root.add(intG);
+/* battery pack */
+const bat=new THREE.Group(),batM=new THREE.MeshStandardMaterial({color:0xcfd2d6,metalness:.8,roughness:.3,emissive:0x5a0a14,transparent:true}),
+im=new THREE.InstancedMesh(new THREE.CylinderGeometry(.036,.036,.16,10),batM,40*17),dm=new THREE.Object3D(),cc=new THREE.Color();
+for(let i=0;i<40;i++)for(let j=0;j<17;j++){dm.position.set((i-19.5)*.09,.3,(j-8)*.1);dm.updateMatrix();const k=i*17+j;im.setMatrixAt(k,dm.matrix);im.setColorAt(k,cc.setHSL(.99,.7,.35+.3*Math.abs(Math.sin(i*.4+j*.3))))}
+const plate=new THREE.Mesh(new THREE.BoxGeometry(3.7,.04,1.8),new THREE.MeshBasicMaterial({color:0x0b0b0d,transparent:true}));plate.position.y=.2;bat.add(im,plate);root.add(bat);
+/* road dashes */
+const lane=new THREE.Group(),lm=new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0});
+for(let i=0;i<14;i++)[-3.4,3.4].forEach(z=>{const b=new THREE.Mesh(new THREE.BoxGeometry(1.6,.01,.05),lm);b.position.set(i*3-20,.01,z);lane.add(b)});S.add(lane);
+/* ---------- state + poses ---------- */
+const B={x:0,y:0,sc:1,ry:.5,spin:0,cx:0,cy:1.4,cz:9,tx:0,ty:.55,tz:0,fov:32,shell:1,batt:0,int:0,speed:0,m:0,in:0};
+const PS={hero:{y:.2,ry:.55,spin:1,cy:1.5,m:.9},show:{x:1.55,ry:.12,m:1.5},models:{y:.45,sc:.9,spin:1,cz:10.5,m:.2},
+perf:{x:2,ry:-.65,sc:.95,m:1.8},int:{cx:1,cy:1.12,cz:0,tx:-.6,ty:.95,fov:70,shell:0,int:1,in:1,ry:0},
+batt:{x:1.5,cx:0,cy:5.8,cz:5.6,ty:.3,shell:.13,batt:1,ry:0,m:1.5},drive:{sc:1.1,cx:-2.4,cy:.6,cz:6.4,ty:.7,ry:.05,speed:1,m:.4}};
+const pose=n=>{const p={...B,...PS[n]};if(mob()&&!p.in){p.x=0;p.sc*=.6;p.cx*=1.4;p.cy*=1.4;p.cz*=1.4;p.y+=p.m}else if(mob()){p.fov=88}return p};
+const st={...pose('hero')};let cur='hero';
+function go(n,d=1.8){cur=n;gsap.to(st,{...pose(n),duration:d,ease:'power3.inOut',overwrite:true})}
+addEventListener('resize',()=>{sz();go(cur,.01)});
+/* ---------- loop ---------- */
+let mx=0,my=0,sx=0,sy=0,T=0,run=true;const clk=new THREE.Clock();
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+gsap.ticker.add(()=>{const d=Math.min(clk.getDelta(),.05);if(!run)return;T+=d;sx+=(mx-sx)*.05;sy+=(my-sy)*.05;
+root.rotation.y=st.ry+st.spin*T*.3+sx*(st.in?.5:.55);root.position.set(st.x,st.y,0);root.scale.setScalar(st.sc);
+cam.fov=st.fov;cam.updateProjectionMatrix();cam.position.set(st.cx,st.cy-sy*(st.in?.1:.5),st.cz);cam.lookAt(st.tx,st.ty,st.tz);
+[paint,glassM].forEach(m=>{m.opacity=st.shell;m.depthWrite=st.shell>.95});body.visible=glass.visible=st.shell>.02;
+intG.visible=st.int>.02;il.intensity=st.int*1.6;bat.visible=st.batt>.02;batM.opacity=plate.material.opacity=st.batt;batM.emissiveIntensity=.7+.5*Math.sin(T*2.4);
+wheels.forEach(w=>w.rotation.z-=d*(.4+st.speed*30));lm.opacity=st.speed*.7;
+lane.children.forEach(b=>{b.position.x-=d*st.speed*40;if(b.position.x<-20)b.position.x+=42});
+ring.material.opacity=.35+.2*Math.sin(T*1.5);rimL.intensity=1+.5*Math.sin(T);R.render(S,cam)});
+/* ---------- UI ---------- */
+const cards=$('#cards');M.forEach((m,i)=>{const b=document.createElement('button');b.className='cd'+(i?'':' on');b.innerHTML=`<b>${m.n.toUpperCase()}</b><span>${m.i.split(' · ')[0]} range</span>`;b.onclick=()=>{setModel(i);document.querySelectorAll('.cd').forEach(c=>c.classList.remove('on'));b.classList.add('on');info(i);gsap.from(car.scale,{x:.6,y:.6,z:.6,duration:1.3,ease:'elastic.out(1,.55)'})};cards.appendChild(b)});
+function info(i){$('#mi').innerHTML=`<b>${M[i].n}</b>${M[i].i}`}info(0);
+['#e8e8ea','#8b8e94','#1a1c20','#17336b','#c8102e'].forEach((c,i)=>{const b=document.createElement('button');b.style.background=c;if(!i)b.className='on';b.setAttribute('aria-label','Paint '+(i+1));b.onclick=()=>{col=c;document.querySelectorAll('#sw button').forEach(x=>x.classList.remove('on'));b.classList.add('on');applyPaint()};$('#sw').appendChild(b)});
+document.querySelectorAll('.sp').forEach(e=>{e.innerHTML=e.textContent.split(' ').map(w=>`<span class="w"><i>${w}</i></span>`).join(' ')});
+gsap.set('.sp i',{yPercent:112});gsap.set('.rv',{y:36,autoAlpha:0});
+setModel(0);
+function init(){
+document.querySelectorAll('.sp').forEach(e=>ScrollTrigger.create({trigger:e,start:'top 90%',once:true,onEnter:()=>gsap.to(e.querySelectorAll('i'),{yPercent:0,duration:1.2,stagger:.07,ease:'power4.out'})}));
+ScrollTrigger.batch('.rv',{start:'top 92%',once:true,onEnter:b=>gsap.to(b,{y:0,autoAlpha:1,duration:1,stagger:.12,ease:'power3.out'})});
+document.querySelectorAll('[data-pose]').forEach(s=>ScrollTrigger.create({trigger:s,start:'top 55%',end:'bottom 55%',onToggle:k=>k.isActive&&go(s.dataset.pose)}));
+gsap.to('#bg',{opacity:0,scale:1.2,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom 25%',scrub:true}});
+gsap.to('#drive .mq',{xPercent:-120,ease:'none',scrollTrigger:{trigger:'#drive',scrub:.6,start:'top bottom',end:'bottom top'}});
+document.querySelectorAll('.cn').forEach(e=>{const n=+e.dataset.n,d=+e.dataset.d,o={v:0},bar=e.parentNode.querySelector('.bar i');
+ScrollTrigger.create({trigger:e,start:'top 85%',once:true,onEnter:()=>{gsap.to(o,{v:n,duration:2.4,ease:'power2.out',onUpdate:()=>e.textContent=o.v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d})});gsap.to(bar,{width:'100%',duration:2.4,ease:'power2.out'})}})});
+ScrollTrigger.create({trigger:'#guide',start:'top top',onToggle:s=>{run=!s.isActive}});
+const h=pose('hero');gsap.fromTo(st,{ry:h.ry-2.8,sc:h.sc*.5},{ry:h.ry,sc:h.sc,duration:2.8,ease:'expo.out',overwrite:true});
+gsap.fromTo('#bg',{opacity:0,scale:.9},{opacity:1,scale:1,duration:2.2,ease:'power3.out'});}
+/* loader */
+const lo={v:0};gsap.to(lo,{v:100,duration:1.8,ease:'power1.inOut',onUpdate:()=>{$('#pc').textContent=Math.round(lo.v);$('#pb').style.width=lo.v+'%'},onComplete:()=>{gsap.to('#ld',{autoAlpha:0,duration:.9,onComplete:()=>$('#ld').remove()});init()}});
+
+/* ---------- ads + consent ---------- */
+const ADS={client:'ca-pub-XXXXXXXXXXXXXXXX'};/* put your AdSense publisher ID here */
+const adOn=!/X{4}/.test(ADS.client);
+if(!adOn)document.querySelectorAll('.adsec').forEach(e=>e.remove());
+function loadAds(personal){if(!adOn||window._ads)return;window._ads=1;
+const sc=document.createElement('script');sc.async=true;sc.crossOrigin='anonymous';sc.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='+ADS.client;document.head.appendChild(sc);
+window.adsbygoogle=window.adsbygoogle||[];if(!personal)window.adsbygoogle.requestNonPersonalizedAds=1;
+document.querySelectorAll('ins.adsbygoogle').forEach(i=>{i.dataset.adClient=ADS.client;try{window.adsbygoogle.push({})}catch(e){}})}
+let ck=null;try{ck=localStorage.getItem('cc')}catch(e){}
+const bn=$('#cc');
+if(ck){bn.remove();loadAds(ck==='y')}
+else{bn.hidden=false;[['#ccy','y'],['#ccn','n']].forEach(([q,v])=>$(q).onclick=()=>{try{localStorage.setItem('cc',v)}catch(e){}bn.remove();loadAds(v==='y')})}
+</script></body></html>
